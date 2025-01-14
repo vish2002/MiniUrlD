@@ -4,6 +4,104 @@
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7fc;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        padding-top: 40px;
+      }
+
+      .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+      }
+
+      form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      label {
+        font-size: 14px;
+        color: #555;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      input[type="text"]:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      button {
+        padding: 10px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      table {
+        width: 100%; /* Ensure table width fits within the page */
+        max-width: 1000px; /* Maximum width for the table */
+        margin: 30px auto;
+        border-collapse: collapse;
+        table-layout: fixed; /* Fixed column layout */
+      }
+
+      th, td {
+        padding: 12px 20px;
+        text-align: left;
+        border: 1px solid #ddd;
+        word-wrap: break-word; /* This allows word wrapping */
+        overflow-wrap: break-word; /* Ensure words break correctly */
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .url-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .generated-url {
+        font-size: 16px;
+        color: #007bff;
+        word-wrap: break-word;
       }
     </style>
     <meta charset="UTF-8" />
@@ -13,25 +111,30 @@
   </head>
   <body>
     <h1>URL Shortener</h1>
-    <% if (locals.id) { %>
-    <p>URL Generated: http://localhost:8001/url/<%= id %></p>
-    <% } %>
+    <div class="url-section">
+      <% if (locals.id) { %>
+      <p class="generated-url">URL Generated: http://localhost:8001/url/<%= id %></p>
+      <% } %>
+    </div>
 
-    <div>
+    <div class="form-container">
       <form method="POST" action="/url">
-        <label>Enter Your Original URL</label>
-        <input type="text" name="url" placeholder="https://example.com" />
+        <label for="url">Enter Your Original URL</label>
+        <input type="text" id="url" name="url" placeholder="https://example.com" />
         <button type="submit">Generate</button>
       </form>
     </div>
-    <div style="margin-top: 30px">
+
+    <div class="url-section" style="margin-top: 30px">
       <% if (locals.urls) { %>
       <table>
         <thead>
-          <th>S. No</th>
-          <th>ShortID</th>
-          <th>Redirect</th>
-          <th>Clicks</th>
+          <tr>
+            <th>S. No</th>
+            <th>ShortID</th>
+            <th>Redirect</th>
+            <th>Clicks</th>
+          </tr>
         </thead>
         <tbody>
           <% urls.forEach((url, index) => { %>

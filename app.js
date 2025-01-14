@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
@@ -10,9 +11,9 @@ const staticRoute = require("./routes/staticRouter");
 const userRoute = require("./routes/user");
 
 const app = express();
-const PORT = 8001;
+const PORT = process.env.PORT || 8001;
 
-connectToMongoDB(process.env.MONGODB ?? "mongodb://localhost:27017/short-url").then(() =>
+connectToMongoDB(process.env.MONGO_URL).then(() =>
   console.log("Mongodb connected")
 );
 
