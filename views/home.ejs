@@ -112,8 +112,9 @@
   <body>
     <h1>URL Shortener</h1>
     <div class="url-section">
-      <% if (locals.id) { %>
+      <% if (id) { %>
          <p class="generated-url">URL Generated: https://miniurld-production.up.railway.app/url/<%= id %> </p>
+      <% } %>
     </div>
 
     <div class="form-container">
@@ -125,7 +126,7 @@
     </div>
 
     <div class="url-section" style="margin-top: 30px">
-      <% if (locals.urls) { %>
+      <% if (urls) { %>
       <table>
         <thead>
           <tr>
