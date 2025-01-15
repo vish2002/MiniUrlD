@@ -1,7 +1,3 @@
-Here's a polished version of your GitHub README content:  
-
----
-
 # MiniUrlD  
 
 MiniUrlD is a web application designed to shorten lengthy URLs into concise links while offering an integrated analytics feature to track visit counts for each shortened link.  
@@ -78,7 +74,3 @@ Follow these steps to set up MiniUrlD on your local machine:
 ---
 
 Feel free to contribute or report issues. Let's make MiniUrlD better together! 😊  
-
---- 
-
-This version is clean, professional, and easy to follow.
