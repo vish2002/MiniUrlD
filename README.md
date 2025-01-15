@@ -29,26 +29,15 @@ Follow these steps to set up MiniUrlD on your local machine:
 3. **Install Dependencies:**  
    ```bash  
    npm install  
-   ```  
+   ```
+    
 
-4. **Set Up Environment Variables:**  
-   - Create a file named `.env` in the project folder.  
-   - Add the following lines to the `.env` file:  
-     ```env  
-     MONGO_URL=<your-mongodb-url>  
-     PORT=8001  
-     ```  
-   - Install dotenv:  
-     ```bash  
-     npm install dotenv  
-     ```  
-
-5. **Start the Server:**  
+4. **Start the Server:**  
    ```bash  
    npm start  
    ```  
 
-6. **Access the Application:**  
+5. **Access the Application:**  
    Open your browser and visit:  
    [http://localhost:8001](http://localhost:8001)  
 
