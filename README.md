@@ -1,6 +1,6 @@
-# MiniUrlD  
+# MiniUrl
 
-MiniUrlD is a web application designed to shorten lengthy URLs into concise links while offering an integrated analytics feature to track visit counts for each shortened link.  
+MiniUrl is a web application designed to shorten lengthy URLs into concise links while offering an integrated analytics feature to track visit counts for each shortened link.  
 
 ## Features  
 - **Dynamic HTML Rendering:** Utilized Embedded JS (.ejs) for seamless server-side rendering of URLs and analytics data.  
