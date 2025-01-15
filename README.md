@@ -18,7 +18,7 @@ Follow these steps to set up MiniUrlD on your local machine:
 
 1. **Clone the Repository:**  
    ```bash  
-   git clone <repository-url>  
+   git clone https://github.com/vish2002/MiniUrlD
    ```  
 
 2. **Navigate to the Project Folder:**  
